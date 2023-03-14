@@ -39,9 +39,12 @@ export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 
 # Alias section
-alias cp="cp -i"                                                # Confirm before overwriting something
+
+# Confirm before overwriting something
+alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
