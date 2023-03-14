@@ -52,7 +52,7 @@ alias gitu='git add . && git commit && git push'
 alias ga="git add"
 alias gd="git diff"
 alias gs="git status"
-alias gl="git log"
+alias gl="git lg"
 alias gc="git commit"
 alias gsw="git switch"
 

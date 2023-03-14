@@ -13,9 +13,14 @@
     excludesfile = ~/.gitignore
 [alias]
     mwps = push -o merge_request.create -o merge_request.target=master -o merge_request.merge_when_pipeline_succeeds
+    lg = log --graph --pretty=format:'%C(yellow bold)%d%Creset%n%C(yellow)%h%Creset - %C(cyan bold)(%ad)%Creset:: %C(white bold)%s%Creset %C(magenta bold)<%aN>%Creset'
 [commit]
     gpgsign = true
 [init]
     defaultBranch = main
 [diff]
     tool = nvimdiff
+[format]
+    pretty = %C(yellow bold)%d%Creset%n%C(yellow)%H%Creset on %C(cyan bold)%ad%Creset by %C(magenta bold)%aN%Creset%n%n%C(white bold)%B%Creset%n
+[log]
+    date = format:%d-%m-%Y, %H:%M
