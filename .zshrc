@@ -30,9 +30,13 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
+WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
+
+# Exports
+export PATH="${PATH}:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin"
+export GPG_TTY=$TTY
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
-WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 # Alias section
 alias cp="cp -i"                                                # Confirm before overwriting something
@@ -52,10 +56,6 @@ alias gsw="git switch"
 alias open="evince"
 alias n="nvim"
 alias update="sudo pacman -Syu"
-
-# Exports
-export PATH="${PATH}:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin"
-export GPG_TTY=$(tty)
 
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
