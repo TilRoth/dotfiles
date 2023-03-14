@@ -1,0 +1,21 @@
+[user]
+    name = Til Roth
+    email = s8tiroth@stud.uni-saarland.de
+[pull]
+    rebase = true
+[rerere]
+    enabled = true
+    autoupdate = true
+[merge]
+    conflictstyle = diff3
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore
+[alias]
+    mwps = push -o merge_request.create -o merge_request.target=master -o merge_request.merge_when_pipeline_succeeds
+[commit]
+    gpgsign = true
+[init]
+    defaultBranch = main
+[diff]
+    tool = nvimdiff
