@@ -37,6 +37,7 @@ export PATH="${PATH}:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin"
 export GPG_TTY=$TTY
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
+export DEPOT_TOOLS_UPDATE=0
 
 # Alias section
 
