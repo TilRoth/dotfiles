@@ -44,7 +44,7 @@ export DEPOT_TOOLS_UPDATE=0
 # Confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
+alias rm='rm -I'
 
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
