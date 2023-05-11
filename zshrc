@@ -33,11 +33,18 @@ SAVEHIST=10000
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 # Exports
-export PATH="${PATH}:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin"
+export PATH="${PATH}:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin:/home/til/.local/bin"
 export GPG_TTY=$TTY
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
+export EDITOR=nvim
+export VISUAL=nvim
+export DIFFPROG=nvimdiff
+export BROWSER=qutebrowser
 export DEPOT_TOOLS_UPDATE=0
+
+XDG_CACHE_HOME=$HOME/.cache
+XDG_CONFIG_HOME=$HOME/.config
+XDG_DATA_HOME=$HOME/.local/share
+XDG_STATE_HOME=$HOME/.local/state
 
 # Alias section
 
@@ -57,9 +64,7 @@ alias gl="git lg"
 alias gc="git commit"
 alias gsw="git switch"
 
-alias open="evince"
 alias n="nvim"
-alias update="sudo pacman -Syu"
 
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
