@@ -66,6 +66,8 @@ alias gsw="git switch"
 
 alias n="nvim"
 
+alias zathura='zathura --fork'
+
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen bundle zsh-users/zsh-autosuggestions

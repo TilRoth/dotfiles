@@ -7,3 +7,4 @@ ln -sn ~/dotfiles/zathura/ ~/.config/zathura
 ln -s ~/dotfiles/gitignore ~/.gitignore
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/latexmkrc ~/.latexmkrc
