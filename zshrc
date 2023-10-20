@@ -22,7 +22,7 @@ setopt histignorespace                                          # Don't save com
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path 
+zstyle ':completion:*' rehash true                              # automatically find new executables in path
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
@@ -55,8 +55,9 @@ alias rm='rm -I'
 
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
-alias gitu='git add . && git commit && git push'
 
+# git aliases
+alias gitu='git add . && git commit && git push'
 alias ga="git add"
 alias gd="git diff"
 alias gs="git status"
@@ -68,6 +69,23 @@ alias n="nvim"
 
 alias zathura='zathura --fork'
 
+alias man='batman'
+
+# Use eza instead of ls
+
+# Exit if the 'eza' command could not be found
+if ! (( $+commands[eza] )); then
+    echo "ERROR: 'eza' command not found"
+    return
+fi
+
+# Create alias override commands using 'eza'
+alias ls='eza --group-directories-first --icons'
+alias ll='ls -lbh --git --git-repos'
+alias la='ll -a'
+alias tree='ll --tree --level=2'
+
+
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen bundle zsh-users/zsh-autosuggestions
@@ -76,20 +94,9 @@ antigen bundle zap-zsh/vim
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-completions
 antigen bundle hlissner/zsh-autopair
-antigen bundle zap-zsh/exa
 antigen theme romkatv/powerlevel10k
 antigen apply
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-# Color man pages
-export LESS_TERMCAP_mb=$'\E[01;32m'
-export LESS_TERMCAP_md=$'\E[01;32m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;47;34m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;36m'
-export LESS=-R
 
