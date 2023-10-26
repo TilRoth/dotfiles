@@ -33,7 +33,7 @@ SAVEHIST=10000
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 # Exports
-export PATH="${PATH}:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin:/home/til/.local/bin"
+export PATH="${PATH}:/home/til/.cargo/bin:/opt/depot_tools:/home/til/.local/share/gem/ruby/3.0.0/bin:/home/til/.local/bin"
 export GPG_TTY=$TTY
 export EDITOR=nvim
 export VISUAL=nvim
