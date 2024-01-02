@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#2D353B"
+foreground = "#D3C6AA"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "Hack Nerd Font"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+
+[font.italic]
+family = "Hack Nerd Font"
+
+[font.normal]
+family = "Hack Nerd Font"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "none"
+startup_mode = "Windowed"
